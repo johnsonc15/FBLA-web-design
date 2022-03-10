@@ -118,7 +118,7 @@ img {
 .header-right {
   display: flex;
   flex-direction: column;
-  background-image: url("../../assets/office.jpg");
+  background-image: url("https://ibb.co/2Nt2YcS");
   background-size: cover;
   background-position: center;
 }
