@@ -39,4 +39,62 @@ body {
   display: flex;
   height: 100%;
 }
+.center-v {
+  align-self: center;
+}
+.center-h {
+  justify-content: center;
+}
+.info {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.chevron {
+  height: .5vw;
+  margin-left: 1vw;
+  transition: all .1s ease-in;
+}
+.link {
+  text-decoration: none;
+  font-size: .9vw;
+  font-weight: 600;
+  color: #d9d9d9;
+}
+.link-dark {
+  text-decoration: none;
+  font-size: .9vw;
+  font-weight: 600;
+  color: #2c2d32;
+}
+.link:hover {
+  color: #f2f2f2;
+}
+.link-dark:hover {
+  color: #0D0D0D;
+}
+.link:hover > .chevron {
+  color: #f2f2f2;
+  transform: translateX(10px);
+}
+.link-dark:hover > .chevron  {
+  color: #0D0D0D;
+  transform: translateX(10px);
+}
+.text-l {
+  font-size: 2.15vw;
+  margin: 1% 0;
+  font-weight: 300;
+  color: #f2f2f2;
+  line-height: 6vh;
+}
+.text-l-dark {
+  font-size: 2.15vw;
+  margin: 1% 0;
+  font-weight: 300;
+  color: #0D0D0D;
+  line-height: 6vh;
+}
+.link-container {
+  margin-top: 2vh;
+}
 </style>

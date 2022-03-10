@@ -22,35 +22,10 @@
           </div> -->
 
         </div>
-        <div class="landing">
-          <div class="welcome">
-            <h2 class="h2">
-              Changing the Workplace. <br />
-              Empowering the User.
-            </h2>
-            <h1 class="h1">FlexWurx</h1>
-            <h3 class="h3">
-              Powering the future of work <br />
-              starting with customer support.
-            </h3>
-          </div>
-        </div>
+        <welcome-text></welcome-text>
       </div>
       <div class="bottom">
-        <div class="container-flex">
-          <div class="center info border-end">
-            <p class="pre-head">More</p>
-            <h2 class="head">Autonomy</h2>
-          </div>
-          <div class="center info border-end">
-            <p class="pre-head">More</p>
-            <h2 class="head">Control</h2>
-          </div>
-          <div class="center info">
-            <p class="pre-head">More</p>
-            <h2 class="head">Flexibility</h2>
-          </div>
-        </div>
+        <attention-text></attention-text>
       </div>
     </div>
     <div class="header-right right">
@@ -65,7 +40,15 @@
 </template>
 
 <script>
+import WelcomeText from '@/components/nav/info/WelcomeText.vue';
+import AttentionText from '@/components/nav/info/AttentionText.vue';
+
 export default {
+  name: 'Header',
+  components: {
+    WelcomeText,
+    AttentionText
+  },
   data () {
     return {
       menu: [
@@ -80,17 +63,6 @@ export default {
 </script>
 
 <style scoped>
-.pre-head {
-  color: #728b9d;
-  font-weight: 600;
-  margin: 0;
-}
-.head {
-  color: #F2F2F2;
-  font-size: 2.5vw;
-  margin: 0;
-}
-
 .vsm-menu {
   max-width: 1024px;
   width: 100%;
@@ -131,39 +103,8 @@ export default {
   }
 } */
 
-.h1 {
-  font-size: 6vw;
-  font-weight: 600;
-  margin: 3% 0;
-}
-.h2 {
-  font-size: 1.8vw;
-  font-weight: 300;
-  margin: 0;
-  color: #2e6ff2;
-}
-.h3 {
-  font-size: 1.2vw;
-  font-weight: 400;
-  margin: 0;
-  color: #728b9d;
-}
 img {
   width: 200px;
-}
-.info {
-  padding-left: 5%;
-  padding-right: 5%;
-  width: calc(100vw / 3);
-}
-.border-end {
-  border-right: 1px solid #f2f2f2;
-}
-.center {
-  align-self: center;
-}
-.welcome {
-  margin-bottom: 10%;
 }
 .header {
   display: flex;
@@ -189,14 +130,6 @@ img {
 }
 .nav-btn {
   height: 10%;
-}
-.landing {
-  display: flex;
-  justify-content: center;
-  margin: 0% 6%;
-  height: 85%;
-  flex-direction: column;
-  position: absolute;
 }
 .top {
   display: block;
@@ -250,8 +183,5 @@ img {
 }
 .logo {
   align-self: flex-end;
-}
-.link:hover {
-  color: #44454d;
 }
 </style>
