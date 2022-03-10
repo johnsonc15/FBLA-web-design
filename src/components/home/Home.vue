@@ -20,7 +20,7 @@
       <div class="container-flex m-top">
         <div class="left-1-3 center-h">
           <div class="sq-img center-v">
-            <img src="https://ibb.co/jWmB5cF" alt="man-working" class="center-v">
+            <img src="https://i.ibb.co/QCLzc2G/man-Working.jpg" alt="man-working" class="center-v">
           </div>
         </div>
         <div class="right-2-3 center-h">
