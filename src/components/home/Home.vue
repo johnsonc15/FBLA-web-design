@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="right-2-3 center-h">
-          <p>test</p>
+          <p>Hi</p>
         </div>
       </div>
     </div>
