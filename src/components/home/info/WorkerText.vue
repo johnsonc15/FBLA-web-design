@@ -1,10 +1,10 @@
 <template>
-  <div class="container-flex">
-    <div class="info info-padding">
+  <div class="info-padding padding-i container-flex">
+    <div class="center-v">
       <h2>A New Way to Work</h2>
-      <p class="text-l">
-        At FlexWurx, we empower the employee by<br />giving them control of
-        their <b>schedule</b>,<br /><b>pay</b>, and <b>identity</b>.
+      <p class="text-l light">
+        At FlexWurx, we empower the employee by giving them control of their
+        <b>schedule</b>, <b>pay</b>, and <b>identity</b>.
       </p>
       <div class="link-container">
         <router-link to="#" class="link"
@@ -39,12 +39,19 @@
 <style scoped>
 h2 {
   color: #d9d9d9;
-  margin: 0 0 2%;
+  margin: 0 0 2rem;
   font-weight: 600;
-  font-size: 1vw;
+  font-size: var(--fs-h-xs);
 }
-.info-padding {
-  padding-top: 5%;
-  padding-bottom: 5%;
+@media (max-width: 1920px) {
+  h2 {
+    margin: 0 0 1rem;
+  }
+  .text-l {
+    margin: 1rem 0;
+  }
+  .link-container {
+    margin-top: 1rem;
+  }
 }
 </style>

@@ -18,29 +18,39 @@
 .landing {
   display: flex;
   justify-content: center;
-  margin: 0% 6%;
   height: 85%;
   flex-direction: column;
   position: absolute;
+}
+@media (max-width: 1920px) {
+  .welcome {
+    justify-content: center;
+  }
 }
 .welcome {
   margin-bottom: 10%;
 }
 .h1 {
-  font-size: 5.5vw;
+  font-size: var(--fs-h-xl);
   font-weight: 600;
   margin: 3% 0;
 }
 .h2 {
-  font-size: 1.65vw;
+  font-size: var(--fs-h-m);
   font-weight: 300;
   margin: 0;
   color: #2e6ff2;
 }
 .h3 {
-  font-size: 1.1vw;
+  font-size: var(--fs-h-s);
   font-weight: 400;
   margin: 0;
   color: #728b9d;
+}
+
+@media (max-width: 1920px) {
+  .h3 {
+    color: var(--gray-main);
+  }
 }
 </style>

@@ -1,110 +1,69 @@
 <template>
-  <div class="home">
-    <div class="home-left left">
-      <div class="top">
+  <div class="container-flex h-86 des">
+    <div class="left-1-3 h-100">
+      <div class="container-flex h-50 blue">
         <worker-text></worker-text>
       </div>
-      <div class="bottom">
+      <div class="container-flex h-50">
         <company-text></company-text>
       </div>
     </div>
-    <div class="home-right right">
-      <div class="container-flex">
+    <div class="right-2-3 h-100">
+      <div class="container-flex h-100 gray">
         <identity-text></identity-text>
       </div>
     </div>
   </div>
-  <div class="home">
-    <div class="margin center-h">
-      <p class="lg-text bold">Why Customer Service?</p>
-      <div class="container-flex m-top">
-        <div class="left-1-3 center-h">
-          <div class="sq-img center-v">
-            <img src="https://i.ibb.co/QCLzc2G/man-Working.jpg" alt="man-working" class="center-v">
-          </div>
-        </div>
-        <div class="right-2-3 center-h">
-          <p>Hi</p>
-        </div>
+  <div class="container-flex h-86 mob">
+    <div class="container-flex h-100 blue">
+      <worker-text></worker-text>
+    </div>
+    <div class="container-flex h-100">
+      <company-text></company-text>
+    </div>
+    <div class="h-100">
+      <div class="container-flex h-100 gray">
+        <identity-text></identity-text>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import WorkerText from '@/components/home/info/WorkerText.vue';
-import IdentityText from '@/components/home/info/IdentityText.vue';
-import CompanyText from '@/components/home/info/CompanyText.vue';
+import WorkerText from "@/components/home/info/WorkerText.vue";
+import CompanyText from "@/components/home/info/CompanyText.vue";
+import IdentityText from "@/components/home/info/IdentityText.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     WorkerText,
+    CompanyText,
     IdentityText,
-    CompanyText
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
-img {
-  width: 100%;
-  height: 100%;
+.blue {
+  background-color: var(--blue-main);
 }
-.sq-img {
-  width: 400px;
-  height: 400px;
+.gray {
+  background-color: var(--gray-main);
 }
-.sq-img img {
-  object-fit: cover;
-}
-.left-1-3 {
-  width: calc(100% * 1 / 3);
-  display: flex;
-}
-.right-2-3 {
-  width: calc(100% * 2 / 3);
-  display: flex;
-}
-.m-top {
-  margin-top: 3%;
-}
-.bold {
-  font-weight: 600;
-}
-.home {
-  display: flex;
-  height: 86vh;
-  position: relative;
-}
-.home-left {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.home-right {
-  height: 100%;
-  background-color: #2c2d32;
-}
-.top {
-  height: 50%;
-  background-color: #2E6FF2;
-}
-.bottom {
+.h-50 {
   height: 50%;
 }
-.center {
-  align-items: center;
-  justify-content: center;
+.mob {
+  display: none;
 }
-.margin {
-  display: flex;
-  margin: 5% 5%;
-  width: 100%;
-  flex-direction: column;
-}
-.lg-text {
-  font-size: 2.5vw;
-  margin: auto;
+@media (max-width: 1920px) {
+  .des {
+    display: none;
+  }
+  .mob {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

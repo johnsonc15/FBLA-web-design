@@ -1,65 +1,88 @@
 <template>
-  <div class="header">
-    <div class="header-left left">
+  <div class="container-flex h-86 header-des">
+    <div class="header-left left-1-3">
       <div class="top">
-        <div class="nav">
-          <div class="logo">
-            <router-link to="/"
-              ><img src="../../assets/FlexWurxLogo.svg" alt="FlexWurx Logo"
-            /></router-link>
-          </div>
-          <vsm-menu :menu="menu" class="links">
-            <template #default="{ item }">
-              <div style="width: 300px; padding: 30px">
-                Dropdown content - {{ item.title }}
-              </div>
-            </template>
-          </vsm-menu>
-          <!-- <div class="links">
+        <div class="padding-i">
+          <div class="nav">
+            <div class="logo">
+              <router-link to="/"
+                ><img src="../../assets/FlexWurxLogo.svg" alt="FlexWurx Logo"
+              /></router-link>
+            </div>
+            <vsm-menu :menu="menu" class="links">
+              <template #default="{ item }">
+                <div style="width: 300px; padding: 30px">
+                  Dropdown content - {{ item.title }}
+                </div>
+              </template>
+            </vsm-menu>
+            <!-- <div class="links">
             <router-link to="#" class="link">Use Cases</router-link>
             <router-link to="#" class="link">Docs</router-link>
             <router-link to="#" class="link">Contact</router-link>
           </div> -->
-
+          </div>
+          <welcome-text></welcome-text>
         </div>
-        <welcome-text></welcome-text>
       </div>
       <div class="bottom">
         <attention-text></attention-text>
       </div>
     </div>
-    <div class="header-right right">
+    <div class="header-right right-2-3">
       <div class="top-img">
-        <div class="nav-btn">
+        <div class="nav-btn padding-i">
           <button class="btn">Login</button>
         </div>
       </div>
       <div class="bottom-img"></div>
     </div>
   </div>
+  <div class="container-flex h-86 header-mob">
+    <div class="header-left h-100 w-100">
+      <div class="top">
+        <div class="padding-i">
+          <div class="nav">
+            <div class="logo">
+              <router-link to="/"
+                ><img src="../../assets/FlexWurxLogo.svg" alt="FlexWurx Logo"
+              /></router-link>
+            </div>
+            
+          </div>
+          <div class="container-flex center-h">
+            <welcome-text></welcome-text>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <attention-text></attention-text>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import WelcomeText from '@/components/nav/info/WelcomeText.vue';
-import AttentionText from '@/components/nav/info/AttentionText.vue';
+import WelcomeText from "@/components/nav/info/WelcomeText.vue";
+import AttentionText from "@/components/nav/info/AttentionText.vue";
 
 export default {
-  name: 'Header',
+  name: "Header",
   components: {
     WelcomeText,
-    AttentionText
+    AttentionText,
   },
-  data () {
+  data() {
     return {
       menu: [
-        { title: 'Product', dropdown: 'product' },
-        { title: 'Use Cases', dropdown: 'useCases' },
-        { title: 'Docs', dropdown: 'docs' },
-        { title: 'Contact', attributes: { href: '/contact' } }
-      ]
-    }
-  }
-}
+        { title: "Product", dropdown: "product" },
+        { title: "Use Cases", dropdown: "useCases" },
+        { title: "Docs", dropdown: "docs" },
+        { title: "Contact", attributes: { href: "/contact" } },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -79,15 +102,19 @@ export default {
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+.links > span {
+  color: black;
+}
+
+@media (max-width: 1920px) {
   .vsm-mob-show {
-    display: block;
+    display: block!important;
   }
   .vsm-mob-hide {
-    display: none;
+    display: none!important;
   }
   .vsm-mob-full {
-    flex-grow: 1;
+    flex-grow: 1!important;
   }
 }
 
@@ -103,12 +130,46 @@ export default {
   }
 } */
 
+.header-mob {
+  display: none;
+}
+@media (max-width: 1920px) {
+  .header-des {
+    display: none;
+  }
+  .header-mob {
+    display: block;
+  }
+  .top {
+    background-image: url("https://i.ibb.co/pyzDr4Q/office.jpg");
+    background-size: cover;
+    background-position: center;
+    position: static;
+  }
+  .top:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+      to top,
+      rgba(124, 124, 124, 0.8),
+      rgb(255, 255, 255, 0.5) 60%,
+      rgba(124, 124, 124, 0.8) 100%
+    );
+  }
+}
+
 img {
-  width: 200px;
+  width: clamp(6.68rem, 10.5vw, 17.18rem);
 }
 .header {
   display: flex;
   height: 86vh;
+  max-height: 1238.4px;
 }
 .header-left {
   display: flex;
@@ -125,11 +186,12 @@ img {
 .nav {
   display: flex;
   height: 15%;
-  margin-top: 2%;
+  margin-top: 2rem;
   position: relative;
 }
 .nav-btn {
   height: 10%;
+  margin-top: 2rem;
 }
 .top {
   display: block;
@@ -153,35 +215,32 @@ img {
   backdrop-filter: blur(11px);
 }
 .btn {
-  margin: 3% 10%;
   float: right;
   background-color: #2e6ff2;
   border: none;
-  height: 40px;
-  width: 18%;
+  height: 2.5rem;
+  width: clamp(5rem, 18%, 12rem);
   cursor: pointer;
   font-size: 1.1rem;
   font-weight: 500;
   color: #f2f2f2;
+  padding: 0;
 }
 .btn:hover {
   border-color: #000;
   background-color: #0f59ef;
   backdrop-filter: blur(20px);
 }
-.logo {
-  margin: 3% 6%;
-}
 .links {
   display: flex;
   flex-wrap: nowrap;
-  margin: 3% 6%;
   text-align: center;
-  align-self: flex-end;
+  align-self: center;
   justify-content: flex-end;
   width: 100%;
+  margin-inline: auto 0;
 }
 .logo {
-  align-self: flex-end;
+  align-self: center;
 }
 </style>

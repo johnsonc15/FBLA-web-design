@@ -1,9 +1,11 @@
 <template>
-  <div class="container-flex">
-    <div class="info info-padding">
+  <div class="info-padding padding-i container-flex">
+    <div class="center-v">
       <h2>A New Way to Hire</h2>
-      <p class="text-l-dark">
-        Through our marketplace, we also <b>reduce costs</b> for companies when <b>hiring and training</b> new employees, while making sure their <b>credentials are trustworthy</b>.
+      <p class="text-l dark">
+        Through our marketplace, we also <b>reduce costs</b> for companies when
+        <b>hiring and training</b> new employees, while making sure their
+        <b>credentials are trustworthy</b>.
       </p>
       <div class="link-container">
         <router-link to="#" class="link-dark"
@@ -38,12 +40,19 @@
 <style scoped>
 h2 {
   color: #2c2d32;
-  margin: 0 0 2%;
+  margin: 0 0 2rem;
   font-weight: 600;
-  font-size: 1vw;
+  font-size: var(--fs-h-xs);
 }
-.info-padding {
-  padding-top: 5%;
-  padding-bottom: 5%;
+@media (max-width: 1920px) {
+  h2 {
+    margin: 0 0 1rem;
+  }
+  .text-l {
+    margin: 1rem 0;
+  }
+  .link-container {
+    margin-top: 1rem;
+  }
 }
 </style>
