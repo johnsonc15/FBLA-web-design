@@ -87,5 +87,8 @@ export default {
     display: flex;
     flex-direction: column;
   }
+  .padding {
+    padding-block: 4rem;
+  }
 }
 </style>

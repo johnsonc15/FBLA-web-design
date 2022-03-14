@@ -34,4 +34,12 @@ h1 {
 .center {
   text-align: center;
 }
+@media (max-width: 1280px) {
+  h1 {
+    text-align: center;
+  }
+  .cta-btn {
+    width: 10rem;
+  }
+}
 </style>
