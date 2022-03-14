@@ -8,7 +8,7 @@
         <b>credentials are trustworthy</b>.
       </p>
       <div class="link-container">
-        <router-link to="#" class="link-dark"
+        <router-link to="#" class="link link-dark"
           >See More
           <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
           <svg
@@ -44,7 +44,7 @@ h2 {
   font-weight: 600;
   font-size: var(--fs-h-xs);
 }
-@media (max-width: 1920px) {
+@media (max-width: 1280px) {
   h2 {
     margin: 0 0 1rem;
   }

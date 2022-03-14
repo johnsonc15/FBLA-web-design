@@ -27,12 +27,24 @@
       </div>
     </div>
   </div>
+  <div class="container-flex padding">
+    <why-cust-service></why-cust-service>
+  </div>
+  <div class="container-flex padding">
+    <why-blockchain></why-blockchain>
+  </div>
+  <div class="container-flex-column h-43 blue center-h">
+    <the-cta></the-cta>
+  </div>
 </template>
 
 <script>
 import WorkerText from "@/components/home/info/WorkerText.vue";
 import CompanyText from "@/components/home/info/CompanyText.vue";
 import IdentityText from "@/components/home/info/IdentityText.vue";
+import WhyCustService from "@/components/home/info/WhyCustService.vue";
+import WhyBlockchain from "@/components/home/info/WhyBlockchain.vue";
+import TheCta from "@/components/home/info/CTA.vue";
 
 export default {
   name: "Home",
@@ -40,6 +52,9 @@ export default {
     WorkerText,
     CompanyText,
     IdentityText,
+    WhyCustService,
+    WhyBlockchain,
+    TheCta
   },
 };
 </script>
@@ -57,7 +72,14 @@ export default {
 .mob {
   display: none;
 }
-@media (max-width: 1920px) {
+.padding {
+  padding-block: 8rem;
+}
+.container-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1280px) {
   .des {
     display: none;
   }

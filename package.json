@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "uikit": "^3.11.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vue-stripe-menu": "^2.1.1"
@@ -27,6 +28,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^7.0.0",
-    "sass-loader": "^10.0.5"
+    "sass-loader": "^10.0.5",
+    "less-loader": "^5.0.0"
   }
 }

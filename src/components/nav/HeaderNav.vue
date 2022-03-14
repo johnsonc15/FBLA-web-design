@@ -6,7 +6,7 @@
           <div class="nav">
             <div class="logo">
               <router-link to="/"
-                ><img src="../../assets/FlexWurxLogo.svg" alt="FlexWurx Logo"
+                ><img :src="photo" alt="FlexWurx Logo"
               /></router-link>
             </div>
             <vsm-menu :menu="menu" class="links">
@@ -45,7 +45,7 @@
           <div class="nav">
             <div class="logo">
               <router-link to="/"
-                ><img src="../../assets/FlexWurxLogo.svg" alt="FlexWurx Logo"
+                ><img :src="photo" alt="FlexWurx Logo"
               /></router-link>
             </div>
             
@@ -65,6 +65,7 @@
 <script>
 import WelcomeText from "@/components/nav/info/WelcomeText.vue";
 import AttentionText from "@/components/nav/info/AttentionText.vue";
+import photo from "@/assets/FlexWurxLogo.svg";
 
 export default {
   name: "Header",
@@ -80,6 +81,7 @@ export default {
         { title: "Docs", dropdown: "docs" },
         { title: "Contact", attributes: { href: "/contact" } },
       ],
+      photo: photo
     };
   },
 };
@@ -106,7 +108,7 @@ export default {
   color: black;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1280px) {
   .vsm-mob-show {
     display: block!important;
   }
@@ -133,7 +135,7 @@ export default {
 .header-mob {
   display: none;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1280px) {
   .header-des {
     display: none;
   }
@@ -145,6 +147,10 @@ export default {
     background-size: cover;
     background-position: center;
     position: static;
+    height: 85%!important;
+  }
+  .bottom {
+    height: 15%!important;
   }
   .top:before {
     content: "";
@@ -179,7 +185,7 @@ img {
 .header-right {
   display: flex;
   flex-direction: column;
-  background-image: url("https://i.ibb.co/pyzDr4Q/office.jpg");
+  background-image: url("../../assets/officeWorking.jpg");
   background-size: cover;
   background-position: center;
 }

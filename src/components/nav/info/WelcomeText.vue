@@ -22,7 +22,7 @@
   flex-direction: column;
   position: absolute;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1280px) {
   .welcome {
     justify-content: center;
   }
@@ -48,7 +48,7 @@
   color: #728b9d;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1280px) {
   .h3 {
     color: var(--gray-main);
   }
