@@ -1,4 +1,5 @@
 <template>
+  <header-nav></header-nav>
   <div class="container-flex h-86 des">
     <div class="left-1-3 h-100">
       <div class="container-flex h-50 blue">
@@ -30,11 +31,11 @@
   <div class="container-flex padding">
     <why-cust-service></why-cust-service>
   </div>
-  <div class="container-flex padding">
+  <div class="container-flex padding padding-b">
     <why-blockchain></why-blockchain>
   </div>
-  <div class="container-flex-column h-43 blue center-h">
-    <the-cta></the-cta>
+  <div class="container-flex-column h-30 blue center-h">
+    <the-cta title="Work when you want, where you want!" button="Join Now"></the-cta>
   </div>
 </template>
 
@@ -45,6 +46,7 @@ import IdentityText from "@/components/home/info/IdentityText.vue";
 import WhyCustService from "@/components/home/info/WhyCustService.vue";
 import WhyBlockchain from "@/components/home/info/WhyBlockchain.vue";
 import TheCta from "@/components/home/info/CTA.vue";
+import HeaderNav from '@/components/nav/HeaderNav.vue';
 
 export default {
   name: "Home",
@@ -54,7 +56,8 @@ export default {
     IdentityText,
     WhyCustService,
     WhyBlockchain,
-    TheCta
+    TheCta,
+    HeaderNav
   },
 };
 </script>
@@ -69,11 +72,17 @@ export default {
 .h-50 {
   height: 50%;
 }
+.h-30 {
+  height: 30%;
+}
 .mob {
   display: none;
 }
 .padding {
-  padding-block: 8rem;
+  padding-top: 8rem;
+}
+.padding-b {
+  padding-bottom: 8rem
 }
 .container-flex-column {
   display: flex;

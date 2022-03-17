@@ -170,7 +170,7 @@ h1 {
   text-align: center;
 }
 .data {
-  font-size: var(--fs-t-s);
+  font-size: var(--fs-t-m);
   color: var(--gray-secondary);
   text-align: center;
   padding-inline: 10%;

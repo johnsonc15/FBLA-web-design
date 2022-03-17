@@ -1,5 +1,5 @@
 <template>
-  <div class="landing">
+  <div class="landing container-flex h-100">
     <div class="welcome">
       <h2 class="h2">
         Changing the Workplace. <br />
@@ -20,7 +20,6 @@
   justify-content: center;
   height: 85%;
   flex-direction: column;
-  position: absolute;
 }
 @media (max-width: 1280px) {
   .welcome {

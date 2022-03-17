@@ -2,25 +2,19 @@
   <div class="container-flex h-86 header-des">
     <div class="header-left left-1-3">
       <div class="top">
-        <div class="padding-i">
+        <div class="padding-i h-87">
           <div class="nav">
             <div class="logo">
               <router-link to="/"
                 ><img :src="photo" alt="FlexWurx Logo"
               /></router-link>
             </div>
-            <vsm-menu :menu="menu" class="links">
-              <template #default="{ item }">
-                <div style="width: 300px; padding: 30px">
-                  Dropdown content - {{ item.title }}
-                </div>
-              </template>
-            </vsm-menu>
+            <nav-links></nav-links>
             <!-- <div class="links">
             <router-link to="#" class="link">Use Cases</router-link>
             <router-link to="#" class="link">Docs</router-link>
             <router-link to="#" class="link">Contact</router-link>
-          </div> -->
+            </div> -->
           </div>
           <welcome-text></welcome-text>
         </div>
@@ -65,6 +59,7 @@
 <script>
 import WelcomeText from "@/components/nav/info/WelcomeText.vue";
 import AttentionText from "@/components/nav/info/AttentionText.vue";
+import NavLinks from "@/components/nav/links/NavLinks.vue"
 import photo from "@/assets/FlexWurxLogo.svg";
 
 export default {
@@ -72,15 +67,10 @@ export default {
   components: {
     WelcomeText,
     AttentionText,
+    NavLinks
   },
   data() {
     return {
-      menu: [
-        { title: "Product", dropdown: "product" },
-        { title: "Use Cases", dropdown: "useCases" },
-        { title: "Docs", dropdown: "docs" },
-        { title: "Contact", attributes: { href: "/contact" } },
-      ],
       photo: photo
     };
   },
@@ -88,50 +78,9 @@ export default {
 </script>
 
 <style scoped>
-.vsm-menu {
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
+.h-87 {
+  height: 86%;
 }
-
-.vsm-nav {
-  margin: 0 10px;
-}
-
-.vsm-link-container {
-  display: flex;
-  flex: 1 1 auto;
-  justify-content: center;
-}
-
-.links > span {
-  color: black;
-}
-
-@media (max-width: 1280px) {
-  .vsm-mob-show {
-    display: block!important;
-  }
-  .vsm-mob-hide {
-    display: none!important;
-  }
-  .vsm-mob-full {
-    flex-grow: 1!important;
-  }
-}
-
-/* @media (min-width: 1920px) {
-  .h1 {
-    font-size: 9.5rem;
-  }
-  .h2 {
-    font-size: 2.85rem;
-  }
-  .h3 {
-    font-size: 1.9rem;
-  }
-} */
-
 .header-mob {
   display: none;
 }
@@ -170,7 +119,7 @@ export default {
 }
 
 img {
-  width: clamp(6.68rem, 10.5vw, 17.18rem);
+  width: clamp(6.68rem, 14vw, 17.18rem);
 }
 .header {
   display: flex;
@@ -231,20 +180,12 @@ img {
   font-weight: 500;
   color: #f2f2f2;
   padding: 0;
+  border-radius: 5px;
 }
 .btn:hover {
   border-color: #000;
   background-color: #0f59ef;
   backdrop-filter: blur(20px);
-}
-.links {
-  display: flex;
-  flex-wrap: nowrap;
-  text-align: center;
-  align-self: center;
-  justify-content: flex-end;
-  width: 100%;
-  margin-inline: auto 0;
 }
 .logo {
   align-self: center;

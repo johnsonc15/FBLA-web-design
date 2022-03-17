@@ -1,13 +1,20 @@
 <template>
   <div class="center-v">
-    <h1>Work when you want, where you want!</h1>
+    <h1>{{ title }}</h1>
   </div>
   <div class="center-v w-50">
     <div class="center">
-      <button class="cta-btn">Join Now</button>
+      <button class="cta-btn">{{ button }}</button>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "TheCTA",
+  props: ["title", "button"]
+}
+</script>
 
 <style scoped>
 h1 {
@@ -25,6 +32,7 @@ h1 {
   font-weight: 300;
   margin-top: 2rem;
   transition: all .25s ease-in;
+  border-radius: 5px;
 }
 .cta-btn:hover {
   cursor: pointer;
