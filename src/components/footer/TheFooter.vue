@@ -75,28 +75,6 @@
       </div>
       <div class="width-1-4 h-100">
         <div class="padding-f">
-          <h4 class="footer-h4">Use Cases</h4>
-          <div class="padding-footer-nav">
-            <router-link
-              class="footer-info footer-info-link"
-              to="/use-case/customer-service"
-              >Customer Service</router-link
-            >
-          </div>
-          <div class="padding-footer-nav">
-            <router-link
-              class="footer-info footer-info-link"
-              to="/use-case/government"
-              >Government</router-link
-            >
-          </div>
-          <div class="padding-footer-nav">
-            <router-link
-              class="footer-info footer-info-link"
-              to="/use-case/real-estate"
-              >Real Estate</router-link
-            >
-          </div>
           <h4 class="footer-h4">Actions</h4>
           <div class="padding-footer-nav">
             <router-link class="footer-info footer-info-link" to="/login"
@@ -107,23 +85,6 @@
             <router-link class="footer-info footer-info-link" to="/signup"
               >Signup</router-link
             >
-          </div>
-        </div>
-      </div>
-      <div class="width-1-4 h-100">
-        <div class="padding-f">
-          <h4 class="footer-h4">Email</h4>
-          <div class="padding-footer">
-            <p class="footer-info">Join our mailing list today!</p>
-            <form @submit.prevent="submitForm">
-              <input
-                type="email"
-                class="email-input w-85"
-                id="email-input"
-                v-model="email"
-              />
-              <button class="btn" type="submit">Join</button>
-            </form>
           </div>
         </div>
       </div>
@@ -163,15 +124,6 @@ export default {
 </script>
 
 <style scoped>
-.btn {
-  background-color: var(--blue-main);
-  border: none;
-  height: 1.8rem;
-  color: var(--white-main);
-  margin-left: 3px;
-  width: 25%;
-  border-radius: 5px;
-}
 .email-input {
   height: 1.75rem;
   margin-top: 0.5rem;
@@ -220,7 +172,7 @@ export default {
   padding-block: 2rem;
 }
 .width-1-4 {
-  width: calc(100% * 1 / 4);
+  width: calc(100% * 1 / 3);
 }
 .border-end {
   border-right: 1px solid var(--white-main);

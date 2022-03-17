@@ -8,7 +8,7 @@
         <b>credentials are trustworthy</b>.
       </p>
       <div class="link-container">
-        <router-link to="#" class="link link-dark"
+        <router-link to="/product/organization" class="link link-dark"
           >See More
           <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
           <svg

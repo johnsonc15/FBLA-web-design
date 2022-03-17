@@ -43,30 +43,6 @@ export default {
             },
           ],
         },
-        {
-          title: "Use Cases",
-          dropdown: "useCases",
-          links: [
-            {
-              name: "Customer Service",
-              href: "/use-case/customer-service",
-              icon: "bi bi-person",
-              font: "var(--fs-h-m",
-            },
-            {
-              name: "Real Estate",
-              href: "/use-case/real-estate",
-              icon: "bi bi-house",
-              font: "var(--fs-h-m)",
-            },
-            {
-              name: "Government",
-              href: "/use-case/government",
-              icon: "bi bi-briefcase",
-              font: "var(--fs-h-m)",
-            }
-          ],
-        },
         { title: "Contact", attributes: { href: "/contact" } },
       ],
     };

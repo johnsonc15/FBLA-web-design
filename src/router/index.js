@@ -3,6 +3,9 @@ import Home from '../components/home/Home.vue'
 import forOrganizations from "../components/product/forOrganizations/ForOrganizations.vue";
 import forEmployees from "../components/product/forEmployees/ForEmployees.vue";
 import TheProduct from "../components/product/TheProduct.vue";
+import TheContact from "../components/contact/TheContact.vue";
+import TheLogin from "../components/auth/TheLogin.vue";
+import TheSignup from "../components/auth/TheSignup.vue";
 
 const routes = [
   {
@@ -37,14 +40,17 @@ const routes = [
   {
     path: "/contact",
     name: "Contact",
+    component: TheContact
   },
   {
     path: "/login",
     name: "Login",
+    component: TheLogin
   },
   {
-    path: "/join",
-    name: "Join",
+    path: "/signup",
+    name: "Signup",
+    component: TheSignup
   },
   { 
     path: "/:notFound(.*)",

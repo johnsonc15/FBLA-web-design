@@ -4,7 +4,7 @@
   </div>
   <div class="center-v w-50">
     <div class="center">
-      <button class="cta-btn">{{ button }}</button>
+      <router-link to="/signup"><button class="cta-btn">{{ button }}</button></router-link>
     </div>
   </div>
 </template>

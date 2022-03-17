@@ -10,8 +10,18 @@
     </div>
     <div class="right-2-3 container-flex p-end">
       <div class="padding-i center-v">
-        <button class="btn">Login</button>
+        <router-link to="/login"><button class="btn">Login</button></router-link>
       </div>
+    </div>
+  </div>
+  <div class="nav-mobile padding-c">
+    <div class="w-50 padding-i container-flex">
+      <router-link to="/"
+          ><img :src="photo" alt="FlexWurx Logo"
+        /></router-link>
+    </div>
+    <div class="w-50 padding-i container-flex flex-end">
+      <nav-links></nav-links>
     </div>
   </div>
 </template>
@@ -34,6 +44,23 @@ export default {
 </script>
 
 <style scoped>
+.nav-mobile {
+  display: none;
+}
+@media (max-width: 1280px) {
+  .nav {
+    display: none!important;
+  }
+  .nav-mobile {
+    display: flex;
+  }
+  .flex-end {
+    justify-content: flex-end;
+  }
+  .padding-c {
+    padding-block: .5rem;
+  }
+}
 img {
   width: clamp(6.68rem, 12vw, 17.18rem);
 }

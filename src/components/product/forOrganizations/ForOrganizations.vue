@@ -1,6 +1,6 @@
 <template>
   <div class="container-flex-column padding-h-t w-100">
-    <div class="header container-flex padding-i padding-h-2 h-40">
+    <div class="header container-flex padding-i padding-h-2 h-40 mob-center">
       <div class="center-v w-40">
         <div class="w-70">
           <h1 class="header-h1">FlexWurx for Organizations</h1>
@@ -11,16 +11,16 @@
           <button class="btn">Join Now!</button>
         </div>
       </div>
-      <div class="header-img-container w-50 center-v center-h">
+      <div class="header-img-container w-50 center-v center-h mob-hide">
         <img class="header-img" :src="forOrganizations" alt="app-photo" />
       </div>
     </div>
     <hr />
     <div class="costs container-flex h-100">
-      <div class="padding-i padding-h-2 w-100">
+      <div class="padding-i padding-h-2 w-100-test">
         <div class="container-flex-column">
           <div class="container-flex">
-            <div class="w-50 container-flex center-h h-30">
+            <div class="w-50 container-flex center-h h-30 mob-center">
               <img :src="moneySaved" alt="graph" class="graph-img" />
             </div>
             <div class="w-50 container-flex">
@@ -44,7 +44,7 @@
       </div>
     </div>
     <div class="time container-flex h-100">
-      <div class="padding-i padding-h-2 w-100">
+      <div class="padding-i padding-h-2 w-100-test">
         <div class="container-flex-column">
           <div class="container-flex">
             <div class="w-50 container-flex">
@@ -112,6 +112,33 @@ export default {
 </script>
 
 <style scoped>
+.w-100-test {
+  width: 100%;
+}
+@media (max-width: 1280px) {
+  .mob-hide {
+    display: none;
+  }
+  .mob-center {
+    justify-content: center;
+  }
+  .w-40 {
+    width: 100%!important;
+  }
+  .w-70 {
+    width: fit-content!important;
+  }
+  .w-50 {
+    width: 100%!important;
+  }
+  .container-flex {
+    display: flex!important;
+    flex-direction: column;
+  }
+  .w-100-test {
+    width: 80%;
+  }
+}
 .cta {
   background-color: var(--blue-main);
 }
@@ -120,6 +147,9 @@ export default {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 .time {
+  background-color: var(--white-main);
+}
+.costs {
   background-color: var(--white-main);
 }
 .info-l {

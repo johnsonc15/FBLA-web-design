@@ -37,12 +37,16 @@
       <div class="top">
         <div class="padding-i">
           <div class="nav">
-            <div class="logo">
-              <router-link to="/"
-                ><img :src="photo" alt="FlexWurx Logo"
-              /></router-link>
+            <div class="nav-mobile padding-c">
+              <div class="w-50 padding-i container-flex">
+                <router-link to="/"
+                  ><img :src="photo" alt="FlexWurx Logo"
+                /></router-link>
+              </div>
+              <div class="w-50 padding-i container-flex flex-end">
+                <nav-links></nav-links>
+              </div>
             </div>
-            
           </div>
           <div class="container-flex center-h">
             <welcome-text></welcome-text>
@@ -59,7 +63,7 @@
 <script>
 import WelcomeText from "@/components/nav/info/WelcomeText.vue";
 import AttentionText from "@/components/nav/info/AttentionText.vue";
-import NavLinks from "@/components/nav/links/NavLinks.vue"
+import NavLinks from "@/components/nav/links/NavLinks.vue";
 import photo from "@/assets/FlexWurxLogo.svg";
 
 export default {
@@ -67,11 +71,11 @@ export default {
   components: {
     WelcomeText,
     AttentionText,
-    NavLinks
+    NavLinks,
   },
   data() {
     return {
-      photo: photo
+      photo: photo,
     };
   },
 };
@@ -96,10 +100,10 @@ export default {
     background-size: cover;
     background-position: center;
     position: static;
-    height: 85%!important;
+    height: 85% !important;
   }
   .bottom {
-    height: 15%!important;
+    height: 15% !important;
   }
   .top:before {
     content: "";
@@ -141,7 +145,6 @@ img {
 .nav {
   display: flex;
   height: 15%;
-  margin-top: 2rem;
   position: relative;
 }
 .nav-btn {
