@@ -4,13 +4,13 @@
       <div style="width: 300px; padding: 30px">
         <ul v-for="link in item.links" :key="link.name" class="nav-list">
           <li>
-            <a :href="link.href" class="nav-list-item"
+            <router-link :to="link.href" class="nav-list-item"
               ><i
                 :class="link.icon"
                 class="nav-icon"
                 :style="{ 'font-size': link.font }"
               ></i
-              >{{ link.name }}</a
+              >{{ link.name }}</router-link
             >
           </li>
         </ul>
