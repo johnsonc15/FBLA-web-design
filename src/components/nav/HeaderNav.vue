@@ -38,7 +38,7 @@
         <div class="padding-i">
           <div class="nav">
             <div class="nav-mobile padding-c">
-              <div class="w-50 padding-i container-flex">
+              <div class="padding-i container-flex">
                 <router-link to="/"
                   ><img :src="photo" alt="FlexWurx Logo"
                 /></router-link>
@@ -48,8 +48,8 @@
               </div>
             </div>
           </div>
-          <div class="container-flex center-h">
-            <welcome-text></welcome-text>
+          <div class="container-flex h-100 center-h">
+            <welcome-text class="center-v welcome"></welcome-text>
           </div>
         </div>
       </div>
@@ -82,6 +82,13 @@ export default {
 </script>
 
 <style scoped>
+.welcome {
+  position: relative;
+  top: 300px;
+}
+.nav-mobile {
+  display: flex;
+}
 .h-87 {
   height: 86%;
 }
@@ -89,6 +96,10 @@ export default {
   display: none;
 }
 @media (max-width: 1280px) {
+  img {
+    height: 30px;
+    width: 100px;
+  }
   .header-des {
     display: none;
   }
